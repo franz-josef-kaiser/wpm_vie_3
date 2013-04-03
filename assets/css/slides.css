@@ -3,7 +3,6 @@
  + Visibility
  + Positions
  + Fonts
- + Media Queries
 ____________________________*/
 
 /** Back compat
@@ -32,8 +31,10 @@ html {
 ____________________________*/
 .slide {
 	display: none;
+	position: relative;
 }
 .slide.active {
+	position: absolute;
 	display: block;
 }
 
@@ -41,41 +42,8 @@ ____________________________*/
 ____________________________*/
 .slide  {
 	margin: 1.75rem 16.6666667% 3rem;
+	padding: 2%;
 }
-	h2 {
-		margin-top: 1.5rem;
-		margin-bottom: 1.875rem;
-	}
-    p {
-	    margin: 0;
-    }
-    p + p {
-	    margin: .4rem 0 0;
-    }
-
-/** Fonts
-____________________________*/
-body {
-	font-size: 1rem;
-	line-height: 1.6;
-	font-family: "elena-web-basic", "Palatino Linotype", Palatino, Palladio, "URW Palladio L", Baskerville, Garamond, Georgia, serif;
-	color: #3b3535;
-}
-	h2 {
-		font-size: 2.368593037rem;
-		line-height: 1.125;
-	}
-	p {
-		        hyphens: auto;
-		   -moz-hyphens: auto;
-		-webkit-hyphens: auto;
-	}
-    p + p {
-	    text-indent: 1.5em;
-    }
-
-/** Media Queries
-____________________________*/
 @media ( max-width: 768px ) {
 	.slide {
 		padding: 0 10%;
@@ -83,11 +51,156 @@ ____________________________*/
 		margin-right: 0;
 	}
 }
-
 @media ( max-width: 480px ) {
 	.slide {
 		padding: 0 5%;
 		margin-left: 0;
 		margin-right: 0;
 	}
+}
+.slide h1 {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 50%;
+	-webkit-transform: translate(0, -50%);
+	   -moz-transform: translate(0, -50%);
+	     -ms-transform: translate(0, -50%);
+	      -o-transform: translate(0, -50%);
+	         transform: translate(0, -50%);
+}
+	h2 {
+		margin-top: 1.5rem;
+		margin-bottom: 1.875rem;
+	}
+    p, ol, ul {
+	    margin: 0;
+	    width: 100%;
+	    height: 100%;
+    }
+    p + p {
+	    margin: .4rem 0 0;
+    }
+    pre {
+	    padding: 20px;
+    }
+    i.xxl.center {
+	    margin: 0 auto;
+	    display: block;
+	    width: 2rem;
+    }
+
+/** Fonts
+____________________________*/
+body {
+	font-size: 1rem;
+	line-height: 1.6;
+	font-family: 'Muli', sans-serif;
+	color: #3b3535;
+}
+pre, code {
+	font-family: 'Share Tech Mono', sans-serif;
+}
+.slide h1 {
+	font-size: 4rem;
+	line-height: .7;
+	text-align: center;
+}
+	h1 i, h2 i {
+		font-size: inherit;
+	}
+	h2 {
+		font-size: 3rem;
+		line-height: 1.4;
+	}
+	p, ol, ul {
+		font-size: 2rem;
+		        hyphens: auto;
+		   -moz-hyphens: auto;
+		-webkit-hyphens: auto;
+	}
+	p {
+		line-height: 1.35;
+	}
+	ol, ul {
+		line-height: 2;
+	}
+	@media ( max-width: 768px ) {
+		h2 {
+			font-size: 2.6rem;
+			line-height: 1.2;
+		}
+		p, ol, ul {
+			font-size: 1.4rem;
+		}
+		p {
+			line-height: 1.45;
+		}
+	}
+	@media ( max-width: 480px ) {
+		h2 {
+			font-size: 2rem;
+			line-height: 1.15;
+		}
+		p, ol, ul {
+			font-size: 1.1rem;
+		}
+		p {
+			line-height: 1.45;
+		}
+	}
+    a {
+	    text-decoration: none;
+    }
+    a i {
+	    font-size: 2rem;
+    }
+    i {
+	    font-size: 2rem;
+    }
+    i.large {
+	    font-size: 4rem;
+    }
+    i.xxl {
+	    font-size: 8rem;
+    }
+    pre {
+	    white-space: pre-wrap;
+	    border-radius: 6px;
+    }
+    kbd {
+	    background: #ccc;
+	    padding: 1% 1% 0;
+	    border-radius: 6px;
+	    -webkit-box-shadow: 0px 3px 0px rgba(100, 100, 100, 1);
+	       -moz-box-shadow: 0px 3px 0px rgba(100, 100, 100, 1);
+	            box-shadow: 0px 3px 0px rgba(100, 100, 100, 1);
+    }
+
+/** Colors
+____________________________*/
+h1, h2 {
+	color: #070743;
+}
+h2 {
+	border-bottom: 2px dashed #AB0768;
+}
+p, ol, ul, a {
+	color: #169D99;
+}
+strong, b, sub, sup {
+	color: #B9CC01;
+}
+mark {
+	background-color: #B9CC01;
+}
+a:hover {
+	color: #AB0768;
+}
+mark:hover {
+	background-color: #AB0768;
+}
+pre, code {
+	color: #E5FCC2;
+	background-color: #547980;
 }

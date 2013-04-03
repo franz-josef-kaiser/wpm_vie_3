@@ -9,6 +9,9 @@
 	<title>Evaluating Themes. Presentation at WP MeetUp in Vienna by Franz Josef Kaiser.</title>
 
 	<link rel="stylesheet" type="text/css" href="assets/css/slides.css" media="all">
+	<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css" media="all">
+	<link href='http://fonts.googleapis.com/css?family=Muli:400,400italic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet' type='text/css'>
 </head>
 
 <body class="deck-container">
@@ -21,20 +24,106 @@
 	</p>
 	<![endif]-->
 
-<!-- SLIDES START -->
-<section class="slide active">
-	<h2>TEST A</h2>
-	<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-	<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-</section>
+<!--<hgroup>
+	<h1>WP MeetUp Vienna #3</h1>
+</hgroup>-->
 
-<section class="slide">
-	<h2>TEST B</h2>
-</section>
+<!-- SLIDES START -->
+	<section class="slide active">
+		<h2>3<sup>rd</sup> WP MeetUp Vienna</h2>
+		<p>04/04/2013 @sektor5</p>
+		<p>
+			with Franz Josef Kaiser
+		</p>
+		<hr />
+		<p>
+			<a href="http://unserkaiser.com" title="Blog"><i class="icon-sign-blank"></i> UK</a>
+			 •
+			<a href="https://twitter.com/unserkaiser" title="@unserkaiser on Twitter"><i class="icon-twitter"></i></a>
+			 •
+			<a href="https://plus.google.com/107110219316412982437/posts" title="Google+"><i class="icon-google-plus-sign"></i></a>
+			 •
+			<a href="https://github.com/franz-josef-kaiser" title="Franz Josef Kaiser on GitHub"><i class="icon-github"></i></a>
+			 •
+			<a href="https://github.com/wecodemore" title="wecodemore"><i class="icon-github"></i></a>
+			 •
+			<a href="http://wpkrauts.com" title="WP Krauts+"><i class="icon-sign-blank"></i> WP.K</a>
+			 •
+			<a href="http://wordpress.stackexchange.com/users/385/kaiser" title="WordPress StackExchange"><i class="icon-sign-blank"></i> WP.SE</a>
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Evaluating Themes</h2>
+		<p>
+			<i class="icon-cloud-download xxl"></i>
+			<br>
+			Before &amp; after
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2><i class="icon-cogs"></i> Toolkit</h2>
+		<ol>
+			<li>Chrome Dev Tools <kbd>F12</kbd></li>
+			<li><a href="https://addons.mozilla.org/de/firefox/addon/firebug/" title="FireBug">FireBug</a> <kbd>F12</kbd></li>
+			<li>Opera Dev Tools <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>i</kbd></li>
+			<li>MS/IE Dev Tools <kbd>F12</kbd></li>
+		</ol>
+	</section>
+
+	<section class="slide">
+		<h2><i class="icon-lock"></i> Premium vs. <i class="icon-unlock"></i> Take away</h2>
+		<ul>
+			<li><a href="http://wordpress.org/extend/themes/" title="WordPress.org">wordpress <em>dot</em> org</a></li>
+			<li><a href="http://themeforest.net/category/wordpress" title="ThemeForest">themeforest.com</a></li>
+			<li><a href="https://github.com/search?q=wordpress+theme&type=Repositories&ref=advsearch&l=PHP" title="GitHub"><i class="icon-github"></i> GitHub</a></li>
+			<li><a href="https://bitbucket.org/Rarst/hybrid-wing/src" title="Hybrid Wing / Bitbucket">Bitbucket</a></li>
+			<li>&hellip; and competitors</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Checking the source</h2>
+		<p>
+			<i class="icon-search xxl center"></i>
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Checking the code</h2>
+		<p>
+			<i class="icon-wrench xxl center"></i>
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Paranoia Config</h2>
+<pre>
+# PHP errors
+error_reporting( E_ALL | E_STRICT );
+@ini_set( 'display_errors',     1 );
+
+# WordPress: DEBUG
+define( 'WP_DEBUG',             true );
+define( 'WP_DEBUG_DISPLAY',     true );
+define( 'SAVEQUERIES',          true );
+# WordPress: DEBUG (MU)
+define( 'DIEONDBERROR',         true );
+</pre>
+		<p>
+			<a href="https://gist.github.com/franz-josef-kaiser/4063197" title="Paranoia Config">
+				<i class="icon-github">
+				</i> Download &amp; additional explanation
+			</a>
+		</p>
+	</section>
 <!-- SLIDES END -->
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script>window.jQuery || document.write( '<script src="js/jquery-1.9.1.min.js"><\/script>' );</script>
+	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+	<script>window.jQuery.ui || document.write( '<script src="js/jquery-ui-1.10.2.min.js"><\/script>' );</script>
 
 	<script type="text/javascript" src="assets/js/slides.js"></script>
 
