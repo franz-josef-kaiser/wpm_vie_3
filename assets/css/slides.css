@@ -1,0 +1,93 @@
+/** Slides
+ + Back compat
+ + Visibility
+ + Positions
+ + Fonts
+ + Media Queries
+____________________________*/
+
+/** Back compat
+____________________________*/
+/* Addresses styling for `hidden` attribute
+ not present in IE7/8/9, FF3, S4.
+ Known issue: no IE6 support. */
+[hidden] {
+	display: none;
+}
+/* Margin handled incorrectly in IE6/7 */
+body {
+	margin: 0;
+}
+/* 1. Corrects text resizing oddly in IE6/7 when
+   body `font-size` is set using`em` units.
+ * 2. Prevents iOS text size adjust after
+   orientation change, without disabling user zoom. */
+html {
+	font-size: 100%; /* 1 */
+	-webkit-text-size-adjust: 100%; /* 2 */
+	    -ms-text-size-adjust: 100%; /* 2 */
+}
+
+/** Visibility
+____________________________*/
+.slide {
+	display: none;
+}
+.slide.active {
+	display: block;
+}
+
+/** Positions
+____________________________*/
+.slide  {
+	margin: 1.75rem 16.6666667% 3rem;
+}
+	h2 {
+		margin-top: 1.5rem;
+		margin-bottom: 1.875rem;
+	}
+    p {
+	    margin: 0;
+    }
+    p + p {
+	    margin: .4rem 0 0;
+    }
+
+/** Fonts
+____________________________*/
+body {
+	font-size: 1rem;
+	line-height: 1.6;
+	font-family: "elena-web-basic", "Palatino Linotype", Palatino, Palladio, "URW Palladio L", Baskerville, Garamond, Georgia, serif;
+	color: #3b3535;
+}
+	h2 {
+		font-size: 2.368593037rem;
+		line-height: 1.125;
+	}
+	p {
+		        hyphens: auto;
+		   -moz-hyphens: auto;
+		-webkit-hyphens: auto;
+	}
+    p + p {
+	    text-indent: 1.5em;
+    }
+
+/** Media Queries
+____________________________*/
+@media ( max-width: 768px ) {
+	.slide {
+		padding: 0 10%;
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+
+@media ( max-width: 480px ) {
+	.slide {
+		padding: 0 5%;
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
